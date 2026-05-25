@@ -5,8 +5,8 @@ async function bacaTarot() {
   // Tampilkan pesan loading
   hasilDiv.innerText = "🔮 Sedang membaca tarotmu...";
 
-  // Ganti dengan API key kamu
-  const API_KEY = "GANTI_API_KEY_KAMU_DISINI";
+  // Ambil API key dari Vercel (lebih aman!)
+  const API_KEY = process.env.API_KEY;
   const url = "https://api.openai.com/v1/chat/completions";
 
   try {
